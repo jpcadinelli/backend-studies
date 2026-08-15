@@ -1,36 +1,31 @@
-# Banco de Dados e Modelagem de Dados
+# 03 — Banco de Dados e Modelagem
 
-## Por que este tópico é importante?
+## Objetivo
+Entender persistência e modelagem de dados, usando PostgreSQL como implementação relacional de referência.
 
-Grande parte das aplicações backend existe para persistir e consultar dados. Modelagem ruim produz inconsistência, dificuldade de evolução e problemas de performance.
+## Pré-requisitos
+Módulos 01 e 02.
 
-## O que estudar
+## Conteúdo
+### Relacionais
+- tabelas, linhas e colunas;
+- SQL;
+- PK, FK, UNIQUE, NOT NULL e CHECK;
+- relacionamentos 1:1, 1:N e N:N;
+- normalização em nível introdutório;
+- índices e custo de consultas;
+- modelagem orientada aos dados do problema.
 
-- [ ] SQL
-- [ ] modelagem relacional
-- [ ] normalização
-- [ ] chaves primárias e estrangeiras
-- [ ] constraints
-- [ ] relacionamentos 1:1, 1:N e N:N
-- [ ] índices
-- [ ] joins
-- [ ] agregações
-- [ ] EXPLAIN e planos de execução
+### Não relacionais — visão geral
+- por que existem modelos além do relacional;
+- key-value, documentos, wide-column e grafos;
+- diferenças de modelagem e acesso;
+- exemplos: Redis, MongoDB, Cassandra e Neo4j.
 
-## Materiais de estudo
+Aprofundamentos em tecnologias não relacionais acontecem apenas quando o projeto precisar delas.
 
-- PostgreSQL Documentation: https://www.postgresql.org/docs/current/
-- PostgreSQL — Using EXPLAIN: https://www.postgresql.org/docs/current/using-explain.html
+## Prática
+Subir PostgreSQL com Docker Compose, aprender acesso básico e migrar produtos da memória para persistência.
 
-## Exercícios práticos
-
-- [ ] Modelar um sistema de pedidos, clientes, produtos e pagamentos.
-- [ ] Comparar uma consulta antes e depois da criação de um índice usando EXPLAIN.
-
-## Anotações
-
-Use esta seção ou novos arquivos neste diretório para registrar conceitos, exemplos, dúvidas e conclusões obtidas durante o estudo.
-
-## Critério de conclusão
-
-Considere o tópico bem compreendido quando você conseguir explicar os conceitos principais com suas próprias palavras, identificar quando aplicá-los e discutir pelo menos um trade-off ou problema real relacionado ao assunto.
+## Evolução do e-commerce
+Produtos passam a persistir. Clientes podem ser introduzidos. O projeto ganha seu primeiro modelo relacional.

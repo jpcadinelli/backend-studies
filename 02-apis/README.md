@@ -1,36 +1,27 @@
-# APIs e Contratos de Comunicação
+# 02 — APIs e Contratos
 
-## Por que este tópico é importante?
+## Objetivo
+Entender APIs HTTP/REST e criar a primeira versão do e-commerce.
 
-APIs são contratos entre sistemas. Uma API bem desenhada reduz acoplamento, facilita evolução, testes, integração e manutenção.
+## Pré-requisitos
+Módulo 01 concluído.
 
-## O que estudar
+## Conteúdo
+- API, recurso e endpoint;
+- REST e RESTful;
+- URI, path params e query params;
+- JSON e payloads;
+- métodos e status HTTP aplicados;
+- validação e erros;
+- paginação, filtros e ordenação;
+- contratos, documentação e versionamento;
+- idempotência em nível introdutório.
 
-- [ ] REST
-- [ ] recursos e endpoints
-- [ ] contratos de entrada e saída
-- [ ] status codes
-- [ ] paginação
-- [ ] filtros e ordenação
-- [ ] versionamento
-- [ ] idempotência
-- [ ] tratamento de erros
-- [ ] documentação de API
+## Prática
+Aqui começa o código. O laboratório usa Python + FastAPI apenas como implementação de referência.
 
-## Materiais de estudo
-
-- HTTP Semantics — RFC 9110: https://www.rfc-editor.org/rfc/rfc9110.html
-- OpenAPI Initiative: https://www.openapis.org/
-
-## Exercícios práticos
-
-- [ ] Projetar uma API de pedidos com criação, consulta, cancelamento e paginação.
-- [ ] Definir um padrão consistente de respostas de erro.
-
-## Anotações
-
-Use esta seção ou novos arquivos neste diretório para registrar conceitos, exemplos, dúvidas e conclusões obtidas durante o estudo.
+## Evolução do e-commerce
+Criar um catálogo em memória com endpoints de produtos. Persistência ainda não entra.
 
 ## Critério de conclusão
-
-Considere o tópico bem compreendido quando você conseguir explicar os conceitos principais com suas próprias palavras, identificar quando aplicá-los e discutir pelo menos um trade-off ou problema real relacionado ao assunto.
+Conseguir justificar o contrato da API sem depender do framework e implementar os endpoints propostos em `exercicios.md`.

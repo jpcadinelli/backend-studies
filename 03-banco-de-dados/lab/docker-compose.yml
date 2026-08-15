@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: backend_studies
+      POSTGRES_USER: backend
+      POSTGRES_PASSWORD: backend
+    ports:
+      - "5432:5432"
+    volumes:
+      - backend_studies_postgres:/var/lib/postgresql/data
+
+volumes:
+  backend_studies_postgres:

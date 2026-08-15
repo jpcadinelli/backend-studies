@@ -1,36 +1,51 @@
-# Fundamentos da Web e HTTP
+# 01 — Fundamentos da Web e HTTP
 
-## Por que este tópico é importante?
+## Objetivo
 
-Todo backend conectado à web depende de protocolos e conceitos que definem como clientes, servidores, proxies e redes se comunicam. Entender essa base evita tratar HTTP como apenas um detalhe de framework.
+Construir o modelo mental necessário para entender como clientes e servidores se comunicam antes de escrever uma API.
 
-## O que estudar
+## Por que este módulo vem primeiro?
 
-- [ ] modelo cliente-servidor
-- [ ] request e response
-- [ ] métodos HTTP
-- [ ] status codes
-- [ ] headers
-- [ ] cookies e sessões
-- [ ] HTTPS e TLS
-- [ ] DNS
-- [ ] cache HTTP
-- [ ] proxies e reverse proxies
+Sem entender request, response, DNS, HTTP e a relação cliente-servidor, frameworks de API viram uma coleção de comandos decorados. Este módulo é propositalmente mais teórico.
 
-## Materiais de estudo
+## Pré-requisitos
 
-- RFC 9110 — HTTP Semantics: https://www.rfc-editor.org/rfc/rfc9110.html
-- The Twelve-Factor App: https://12factor.net/pt_br/
+Nenhum conhecimento de backend ou Python é necessário.
 
-## Exercícios práticos
+## Conteúdo
 
-- [ ] Inspecionar uma requisição HTTP completa e explicar cada parte.
-- [ ] Desenhar o caminho de uma requisição do navegador até a aplicação e de volta ao cliente.
+- internet e modelo cliente-servidor;
+- endereço IP, portas e noções de TCP;
+- DNS;
+- HTTP e HTTPS;
+- request e response;
+- métodos HTTP;
+- status codes;
+- headers;
+- URI/URL;
+- cookies e estado;
+- cache HTTP em nível introdutório;
+- stateless;
+- visão geral do caminho cliente → rede → servidor → resposta.
 
-## Anotações
+## Tipo de prática
 
-Use esta seção ou novos arquivos neste diretório para registrar conceitos, exemplos, dúvidas e conclusões obtidas durante o estudo.
+**Revisão e observação.** Não há implementação do e-commerce neste módulo.
+
+É permitido observar requisições no navegador/DevTools, mas não é necessário criar uma API ou escrever código.
+
+## Evolução do e-commerce
+
+Nenhuma. O primeiro código será criado no módulo 02.
 
 ## Critério de conclusão
 
-Considere o tópico bem compreendido quando você conseguir explicar os conceitos principais com suas próprias palavras, identificar quando aplicá-los e discutir pelo menos um trade-off ou problema real relacionado ao assunto.
+Você deve conseguir explicar, sem depender de framework:
+
+1. o que acontece quando um cliente faz uma requisição HTTP;
+2. a diferença entre request e response;
+3. o papel de DNS, IP e porta;
+4. o significado das principais famílias de status HTTP;
+5. por que HTTP é considerado stateless.
+
+Depois, responda [`exercicios.md`](./exercicios.md) e use [`materiais.md`](./materiais.md) para aprofundar.

@@ -1,109 +1,96 @@
 # Backend Studies
 
-Repositório pessoal de estudos sobre **Engenharia de Backend**.
+Roadmap sequencial de estudos de **Engenharia de Backend**, independente de linguagem na teoria e baseado em um único projeto prático evolutivo: um **e-commerce simplificado**.
 
-O objetivo é construir uma base de conhecimento progressiva e independente de linguagem ou framework, reunindo conceitos, materiais, anotações, exercícios e pequenos experimentos sobre os principais temas de desenvolvimento backend.
+A proposta não é estudar ferramentas isoladas. Cada módulo apresenta um problema ou conceito de backend no momento em que ele passa a fazer sentido. Quando houver exercício com código, a implementação evolui o mesmo projeto existente.
 
-> O foco deste repositório não é decorar ferramentas. É entender os fundamentos, os problemas que cada tecnologia resolve e os trade-offs envolvidos nas decisões de engenharia.
+## Princípios do repositório
 
-## Como usar este repositório
+1. **Teoria primeiro.** Nenhum exercício exige um conceito que ainda não apareceu no roadmap.
+2. **Um único projeto cumulativo.** Todo exercício de implementação evolui `project/ecommerce`.
+3. **Python é ferramenta, não matéria.** A teoria é geral; os `python-lab` explicam apenas o Python necessário para aplicar o conteúdo.
+4. **PostgreSQL é a implementação relacional de referência.** Bancos não relacionais são apresentados conceitualmente e entram na prática quando houver necessidade real, como Redis em cache.
+5. **Docker é usado cedo como ferramenta operacional e estudado profundamente depois.** No módulo de banco ele apenas ajuda a subir PostgreSQL; o estudo de containers acontece no módulo 17.
+6. **Materiais são curados por relevância.** Documentação oficial, artigos, papers, vídeos e livros podem ser antigos ou recentes; o critério principal é a qualidade e a utilidade para o assunto.
+7. **Nem todo módulo precisa de código.** Revisão, observação, análise e modelagem também são exercícios válidos.
 
-Cada tópico possui seu próprio diretório com:
+## Projeto evolutivo
 
-- explicação sobre por que o assunto é importante;
-- conceitos que devem ser estudados;
-- materiais recomendados;
-- exercícios e problemas práticos;
-- espaço para futuras anotações e exemplos.
+O laboratório central é um e-commerce simplificado. O escopo pode incluir, quando o conteúdo justificar:
 
-A sugestão é avançar na ordem do roadmap, mas revisitar os assuntos sempre que eles aparecerem em problemas reais.
+- produtos;
+- clientes;
+- carrinho;
+- pedidos e itens;
+- estoque;
+- pagamento simulado;
+- autenticação e autorização;
+- cache;
+- eventos e processamento assíncrono;
+- observabilidade;
+- automação de entrega.
 
-## Roadmap de Backend
+Funcionalidades só entram quando ajudam a ensinar um conceito. O objetivo não é reproduzir um e-commerce comercial completo.
 
-### Nível 1 — Fundamentos
+Veja: [`project/ecommerce/README.md`](./project/ecommerce/README.md).
 
+## Roadmap
+
+### Fundamentos e primeira aplicação
 - [ ] [01. Fundamentos da Web e HTTP](./01-fundamentos-web/)
-- [ ] [02. APIs e Contratos de Comunicação](./02-apis/)
+- [ ] [02. APIs e Contratos](./02-apis/)
 - [ ] [03. Banco de Dados e Modelagem](./03-banco-de-dados/)
 - [ ] [04. Transações e Consistência](./04-transacoes-consistencia/)
-- [ ] [08. Autenticação e Autorização](./08-autenticacao-autorizacao/)
-- [ ] [09. Segurança de Aplicações](./09-seguranca/)
 
-### Nível 2 — Engenharia de Software
+### Qualidade e engenharia de software
+- [ ] [05. Testes de Software](./05-testes/)
+- [ ] [06. Arquitetura de Software](./06-arquitetura-software/)
+- [ ] [07. Design de Software](./07-design-software/)
+- [ ] [08. Domain-Driven Design](./08-ddd/)
 
-- [ ] [05. Arquitetura de Software](./05-arquitetura-software/)
-- [ ] [06. Princípios de Design de Software](./06-design-software/)
-- [ ] [07. Domain-Driven Design — DDD](./07-ddd/)
-- [ ] [10. Testes de Software](./10-testes/)
+### Identidade, proteção e backend avançado
+- [ ] [09. Autenticação e Autorização](./09-autenticacao-autorizacao/)
+- [ ] [10. Segurança](./10-seguranca/)
+- [ ] [11. Concorrência e Assincronismo](./11-concorrencia-assincronismo/)
+- [ ] [12. Cache](./12-cache/)
+- [ ] [13. Mensageria e Eventos](./13-mensageria-eventos/)
+- [ ] [14. Sistemas Distribuídos](./14-sistemas-distribuidos/)
 
-### Nível 3 — Backend Avançado
-
-- [ ] [11. Concorrência e Processamento Assíncrono](./11-concorrencia-assincronismo/)
-- [ ] [12. Mensageria e Arquitetura Orientada a Eventos](./12-mensageria-eventos/)
-- [ ] [13. Sistemas Distribuídos](./13-sistemas-distribuidos/)
-- [ ] [14. Cache](./14-cache/)
-
-### Nível 4 — Engenharia de Sistemas
-
-- [ ] [15. Performance e Escalabilidade](./15-performance-escalabilidade/)
-- [ ] [16. Observabilidade](./16-observabilidade/)
+### Produção e consolidação
+- [ ] [15. Observabilidade](./15-observabilidade/)
+- [ ] [16. Performance e Escalabilidade](./16-performance-escalabilidade/)
 - [ ] [17. Containers e Infraestrutura](./17-containers-infraestrutura/)
-- [ ] [18. CI/CD e Entrega de Software](./18-ci-cd/)
+- [ ] [18. CI/CD](./18-ci-cd/)
 - [ ] [19. Cloud](./19-cloud/)
 - [ ] [20. System Design](./20-system-design/)
 
-## Por que essa ordem?
+## Estrutura de cada módulo
 
-Os primeiros tópicos constroem o entendimento do funcionamento de uma aplicação backend: comunicação, contratos e dados. Em seguida entram arquitetura, design e testes, que ajudam a manter sistemas maiores. Depois aparecem concorrência, cache, mensageria e sistemas distribuídos, onde as falhas e a consistência ficam mais complexas. Por fim, performance, observabilidade, infraestrutura, cloud e system design conectam desenvolvimento ao comportamento real de sistemas em produção.
-
-## Método de estudo sugerido
-
-Para cada assunto:
-
-1. Entender o problema que o conceito resolve.
-2. Estudar os fundamentos antes de uma ferramenta específica.
-3. Construir um exemplo pequeno.
-4. Analisar um cenário real de falha ou trade-off.
-5. Registrar as próprias conclusões no diretório do tópico.
-6. Criar um exercício ou projeto pequeno para validar o entendimento.
-
-## Estrutura
+Quando aplicável:
 
 ```text
-backend-studies/
-├── README.md
-├── 01-fundamentos-web/
-├── 02-apis/
-├── 03-banco-de-dados/
-├── 04-transacoes-consistencia/
-├── 05-arquitetura-software/
-├── 06-design-software/
-├── 07-ddd/
-├── 08-autenticacao-autorizacao/
-├── 09-seguranca/
-├── 10-testes/
-├── 11-concorrencia-assincronismo/
-├── 12-mensageria-eventos/
-├── 13-sistemas-distribuidos/
-├── 14-cache/
-├── 15-performance-escalabilidade/
-├── 16-observabilidade/
-├── 17-containers-infraestrutura/
-├── 18-ci-cd/
-├── 19-cloud/
-└── 20-system-design/
+XX-topico/
+├── README.md       # objetivo, teoria, pré-requisitos e papel no projeto
+├── materiais.md    # artigos, papers, documentação, vídeos e livros
+├── exercicios.md   # revisão, observação ou implementação cumulativa
+└── python-lab/     # somente quando Python precisa ser explicado para a prática
 ```
 
-## Evolução do repositório
+Alguns módulos também possuem arquivos de ambiente específicos. Eles só aparecem quando passam a ser necessários.
 
-Este repositório deve crescer junto com os estudos. Os diretórios podem receber futuramente:
+## Como estudar
+
+Para cada módulo:
+
+1. Leia o `README.md`.
+2. Estude os materiais principais de `materiais.md`.
+3. Responda os exercícios conceituais sem consultar a resposta imediatamente.
+4. Se houver implementação, siga o enunciado e os guias locais.
+5. Registre decisões e dificuldades no `STUDY-LOG.md`.
+6. Só avance quando conseguir explicar **por que** a solução funciona e quais trade-offs ela possui.
+
+A progressão desejada é:
 
 ```text
-README.md
-anotacoes.md
-exemplos/
-exercicios/
-referencias.md
+Conhecer → Entender → Observar → Experimentar → Implementar → Diagnosticar → Projetar
 ```
-
-Não é necessário preencher tudo de uma vez. A proposta é transformar o repositório em uma base de conhecimento construída ao longo do tempo.
